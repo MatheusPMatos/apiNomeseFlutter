@@ -15,37 +15,33 @@ class CidadesDetailTile extends ConsumerWidget {
     required this.cidade,
   }) : super(key: key);
 
-   @override
-   Widget build(BuildContext context, WidgetRef ref) {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     final homepagevariaveis = ref.watch(homePageVmProvider);
-       return  InkWell(
-        onTap: () {
-          ref.read(homePageVmProvider.notifier).setCidadeINdex(index);
-        },
-         child: Container(
-             padding: const EdgeInsets.all(20),
-             margin: const EdgeInsets.only(bottom: 10),
-             decoration: BoxDecoration(
+    return InkWell(
+      onTap: () {
+        ref.read(homePageVmProvider.notifier).setCidadeINdex(index);
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.only(bottom: 10),
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color:
-            homepagevariaveis.cidadeindex != null && 
-            homepagevariaveis.cidadeindex ==  index?  
-            Colors.greenAccent: Colors.grey[350]!),
-             ),
-             child: Row(
+              color: homepagevariaveis.cidadeindex != null &&
+                      homepagevariaveis.cidadeindex == index
+                  ? Colors.greenAccent
+                  : Colors.grey[350]!),
+        ),
+        child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             Expanded(
               child: Text(
                 cidade.nome,
-                
               ),
             ),
-            Text(
-              cidade.estado
-            
-            ),
+            Text(cidade.estado),
             Expanded(
               child: Text(
                 cidade.codigo.toString(),
@@ -53,8 +49,8 @@ class CidadesDetailTile extends ConsumerWidget {
               ),
             ),
           ],
-             ),
-           ),
-       );
+        ),
+      ),
+    );
   }
 }

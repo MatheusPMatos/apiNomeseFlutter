@@ -1,4 +1,3 @@
-
 import 'package:flutteribgeapi/src/repository/ibge_repository.dart';
 import 'package:flutteribgeapi/src/repository/ibge_repository_impl.dart';
 import 'package:flutteribgeapi/src/service/ibge_service.dart';
@@ -13,9 +12,9 @@ part 'provider.g.dart';
 RestClient restClient(RestClientRef ref) => RestClient();
 
 @Riverpod(keepAlive: true)
-IbgeService ibgeService(IbgeServiceRef ref)=>
-  IbgeServiceImpl (ref.read(ibgeRepositoryProvider) );
+IbgeService ibgeService(IbgeServiceRef ref) =>
+    IbgeServiceImpl(ref.read(ibgeRepositoryProvider));
 
 @Riverpod(keepAlive: true)
-IbgeRepository ibgeRepository(IbgeRepositoryRef ref)=>
-  IbgeRepositoryImpl(ref.read(restClientProvider));
+IbgeRepository ibgeRepository(IbgeRepositoryRef ref) =>
+    IbgeRepositoryImpl(ref.read(restClientProvider));

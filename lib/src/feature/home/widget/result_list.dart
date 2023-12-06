@@ -48,23 +48,21 @@ class ResultList extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: Text(
-                                      'Nome: ${result.nome}',
-                                      style: const TextStyle(fontSize: 22),
-                                      textAlign: TextAlign.center,
-                                                          ),
-                            ),
-                             Text(
-                              '${result.ranking}º',
-                              style: const TextStyle(fontSize: 22),
-                              textAlign: TextAlign.start,
-                            ),
-                            const SizedBox(
-                               width: 10,
-                            ),
-                  
+                                    'Nome: ${result.nome}',
+                                    style: const TextStyle(fontSize: 22),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Text(
+                                  '${result.ranking}º',
+                                  style: const TextStyle(fontSize: 22),
+                                  textAlign: TextAlign.start,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
                               ],
                             ),
-                            
                             const SizedBox(
                               height: 5,
                             ),
@@ -75,7 +73,6 @@ class ResultList extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                           
                           ],
                         ),
                       ),

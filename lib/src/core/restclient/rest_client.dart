@@ -7,5 +7,5 @@ final class RestClient extends DioForBrowser {
     connectTimeout: const Duration(seconds: 5),
     receiveTimeout: const Duration(seconds: 5),
 
-  )){}
+  ));
 }
